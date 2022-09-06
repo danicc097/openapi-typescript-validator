@@ -30,9 +30,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Q42/openapi-typescript-validator.git"
+    "url": "git+https://github.com/danicc097/openapi-typescript-validator.git"
   },
-  "homepage": "https://github.com/Q42/openapi-typescript-validator",
+  "homepage": "https://github.com/danicc097/openapi-typescript-validator",
   "peerDependencies": {
     "ajv": "^8.0.0",
     "ajv-formats": "^2.0.0"

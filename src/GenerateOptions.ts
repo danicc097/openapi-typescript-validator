@@ -1,6 +1,7 @@
-import { FormatsPluginOptions } from 'ajv-formats';
-import { Options } from "prettier";
+import { FormatsPluginOptions } from "ajv-formats";
+import { Options as PrettierOptions } from "prettier";
 import { SchemaType } from "./parse-schema";
+import { Options as AjvOptions } from "ajv";
 
 export type ValidatorOutput = "module" | "commonjs";
 
@@ -30,7 +31,7 @@ export interface GenerateOptions {
   /**
    * adds the "ajv-formats" packages
    * @default false
-  */
+   */
   addFormats?: boolean;
 
   /**
@@ -42,7 +43,12 @@ export interface GenerateOptions {
   /**
    * @default prettier typescript options
    */
-  prettierOptions?: Options;
+  prettierOptions?: PrettierOptions;
+
+  /**
+   * @default ajv typescript options
+   */
+  ajvOptions?: AjvOptions;
 
   /**
    * list of definitions to generate decoders for

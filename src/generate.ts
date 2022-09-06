@@ -14,15 +14,12 @@ import { generateAjvValidator } from "./generate/generate-ajv-validator";
 export async function generate(options: GenerateOptions) {
   const { schemaFile, schemaType } = options;
   const prettierOptions = options.prettierOptions ?? { parser: "typescript" };
+  const ajvOptions = options.ajvOptions ?? { strict: false };
 
   const directories: string[] =
-    typeof options.directory === "string"
-      ? [options.directory]
-      : options.directory;
+    typeof options.directory === "string" ? [options.directory] : options.directory;
 
-  console.info(
-    `Start generating files for ${schemaType} schema: ${schemaFile}`
-  );
+  console.info(`Start generating files for ${schemaType} schema: ${schemaFile}`);
 
   const schema = await parseSchema(schemaFile, schemaType);
 
@@ -47,7 +44,8 @@ export async function generate(options: GenerateOptions) {
         options.addFormats ?? false,
         options.formatOptions,
         directories,
-        prettierOptions
+        prettierOptions,
+        ajvOptions
       );
     } else if (options.standalone.mergeDecoders === true) {
       generateStandaloneMergedDecoders(
