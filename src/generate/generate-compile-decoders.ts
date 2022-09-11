@@ -45,6 +45,9 @@ export function generateCompileBasedDecoders(
 
 const decodersFileTemplate = `
 /* eslint-disable */
+// @ts-nocheck
+/* eslint-disable */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 
 import Ajv from 'ajv';
 $Imports

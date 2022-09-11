@@ -31,6 +31,10 @@ const metaTemplate = (esm: boolean) => {
   const importExtension = esm ? ".js" : "";
   return `
 /* eslint-disable */
+// @ts-nocheck
+/* eslint-disable */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+
 import { $ModelImports } from './models${importExtension}';
 
 export const schemaDefinitions = {

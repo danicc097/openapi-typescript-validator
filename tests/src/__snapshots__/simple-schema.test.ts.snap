@@ -138,6 +138,10 @@ export interface Decoder<T> {
 
 exports[`simple-schema meta.ts 1`] = `
 "/* eslint-disable */
+// @ts-nocheck
+/* eslint-disable */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+
 import { User } from \\"./models\\";
 
 export const schemaDefinitions = {

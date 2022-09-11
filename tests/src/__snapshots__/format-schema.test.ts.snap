@@ -2,6 +2,9 @@
 
 exports[`format-schema - compile based - options decoders should match 1`] = `
 "/* eslint-disable */
+// @ts-nocheck
+/* eslint-disable */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 
 import Ajv from \\"ajv\\";
 import addFormats from \\"ajv-formats\\";
@@ -44,6 +47,9 @@ export const PriceDecoder: Decoder<Price> = {
 
 exports[`format-schema - compile based decoders should match 1`] = `
 "/* eslint-disable */
+// @ts-nocheck
+/* eslint-disable */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 
 import Ajv from \\"ajv\\";
 import addFormats from \\"ajv-formats\\";
